@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .responsibility-hero {
+        background: linear-gradient(rgba(209, 0, 0, 0.8), rgba(154, 0, 0, 0.8)), url('{% static "images/responsibility-banner.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+    }
+    
+    .pillar-card {
+        border: none;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s;
+        height: 100%;
+        border-top: 4px solid #D10000;
+    }
+    
+    .pillar-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(209,0,0,0.2);
+    }
+    
+    .impact-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #D10000;
+    }
+    
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(209,0,0,0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+    }
+    
+    .icon-circle i {
+        font-size: 2rem;
+        color: #D10000;
+    }
+</style>
+
+<!-- Hero Section -->
+<section class="responsibility-hero">
+    <div class="container">
+        <h1 class="display-4 mb-4">Notre Engagement Responsable</h1>
+        <p class="lead">Exploitation minière durable au service des communautés et de l'environnement</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Nos 3 Piliers de Responsabilité</h2>
+                <p>Euro Congo Entreprise intègre des pratiques responsables dans toutes ses opérations minières en RDC</p>
+            </div>
+        </div>
+        
+        <!-- Pillars -->
+        <div class="row g-4 mb-5">
+            <!-- Environnement -->
+            <div class="col-md-4">
+                <div class="pillar-card card">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-circle">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Environnement</h3>
+                        <p>Protection des écosystèmes et gestion durable des ressources</p>
+                        <ul class="text-start">
+                            <li>Réhabilitation systématique des sites</li>
+                            <li>Réduction de 40% des émissions CO2</li>
+                            <li>Recyclage de 90% des déchets miniers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Communautés -->
+            <div class="col-md-4">
+                <div class="pillar-card card">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-circle">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Communautés</h3>
+                        <p>Développement local et partenariats durables</p>
+                        <ul class="text-start">
+                            <li>85% de main-d'œuvre locale</li>
+                            <li>12 écoles construites</li>
+                            <li>Programmes de formation professionnelle</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ethique -->
+            <div class="col-md-4">
+                <div class="pillar-card card">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-circle">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Éthique</h3>
+                        <p>Transparence et conformité aux standards internationaux</p>
+                        <ul class="text-start">
+                            <li>Zéro tolérance pour le travail des enfants</li>
+                            <li>Politique anticorruption stricte</li>
+                            <li>Audits sociaux réguliers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Impact -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h3 class="mb-4">Notre Impact en Chiffres</h3>
+                                <div class="row text-center">
+                                    <div class="col-4 mb-4">
+                                        <div class="impact-number">25+</div>
+                                        <small>Projets communautaires</small>
+                                    </div>
+                                    <div class="col-4 mb-4">
+                                        <div class="impact-number">1,200</div>
+                                        <small>Emplois créés</small>
+                                    </div>
+                                    <div class="col-4 mb-4">
+                                        <div class="impact-number">500ha</div>
+                                        <small>Terres reboisées</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="{% static 'images/community-impact.jpg' %}" alt="Impact communautaire" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Engagement -->
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card bg-danger text-white">
+                    <div class="card-body p-5 text-center">
+                        <i class="fas fa-quote-left fa-3x mb-4 opacity-25"></i>
+                        <h3 class="mb-4">"Notre succès se mesure à notre impact positif sur les communautés et l'environnement"</h3>
+                        <p class="mb-0">Directeur Général, Euro Congo Entreprise</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h3 class="mb-4">Engagés pour une industrie minière plus responsable</h3>
+        <a href="{% url 'contact' %}" class="btn btn-danger btn-lg">Contactez notre équipe RSE</a>
+    </div>
+</section>
+
+{% endblock %}

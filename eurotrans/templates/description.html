@@ -1,0 +1,104 @@
+{% load static %}
+<style>
+    .careers-hero {
+        background: linear-gradient(rgba(209, 0, 0, 0.8), rgba(154, 0, 0, 0.8)), url('{% static "images/logistics-banner.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+    }
+    
+    .benefit-card {
+        border: none;
+        border-radius: 8px;
+        padding: 30px;
+        height: 100%;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s;
+        border-top: 3px solid transparent;
+    }
+    
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(209,0,0,0.1);
+        border-top: 3px solid #D10000;
+    }
+    
+    .linkedin-box {
+        border: 2px solid #0077B5;
+        border-radius: 8px;
+        padding: 30px;
+        background-color: rgba(0, 119, 181, 0.05);
+    }
+    
+    .job-category {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+    }
+    
+    .job-category:hover {
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .about-logistics {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 40px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        margin-bottom: 40px;
+    }
+    
+    .logistics-badge {
+        background-color: #D10000;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+</style>
+
+<!-- About EURO CONGO TRANS -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="about-logistics">
+            <span class="logistics-badge">EURO CONGO TRANS</span>
+            <h2 class="mb-4">Notre Expertise Logistique Pétrolière</h2>
+            <p class="lead">EURO CONGO TRANS est la division spécialisée du groupe EURO CONGO ENTREPRISE, dédiée exclusivement au transport, stockage et distribution de produits pétroliers en République Démocratique du Congo.</p>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h4><i class="fas fa-gas-pump text-danger me-2"></i> Spécialisation</h4>
+                    <p>Contrairement à EURO CONGO ENTREPRISE qui couvre divers secteurs, ECT se concentre spécifiquement sur :</p>
+                    <ul>
+                        <li>Le transport sécurisé de produits pétroliers</li>
+                        <li>La distribution nationale de carburants</li>
+                        <li>Les solutions de stockage certifiées</li>
+                        <li>Les services techniques spécialisés</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4><i class="fas fa-chart-line text-danger me-2"></i> Chiffres Clés</h4>
+                    <ul>
+                        <li><strong>+50 véhicules spécialisés</strong> dans notre flotte</li>
+                        <li><strong>+120 professionnels</strong> qualifiés</li>
+                        <li><strong>+7 ans d'expérience</strong> dans le secteur pétrolier</li>
+                        <li><strong>3 centres logistiques</strong> à travers la RDC</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h4><i class="fas fa-bullseye text-danger me-2"></i> Notre Vision Logistique</h4>
+                <p>ECT s'engage à fournir des solutions logistiques pétrolières fiables et sécurisées, combinant efficacité opérationnelle, respect des normes environnementales et contribution au développement des infrastructures énergétiques nationales.</p>
+            </div>
+        </div>
+    </div>
+</section>

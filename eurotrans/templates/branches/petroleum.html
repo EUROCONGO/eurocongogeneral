@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Euro Congo Général - Produits Pétroliers{% endblock %}
+{% block meta_description %}Expert en transport, distribution et stockage de produits pétroliers en RDC. Solutions intégrées pour vos besoins énergétiques.{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <span class="badge bg-primary rounded-pill px-3 py-2 mb-3">Produits Pétroliers</span>
+                <h1 class="display-4 fw-bold mb-4">Transport et Distribution Pétrolière</h1>
+                <p class="lead mb-4">Notre branche pétrolière offre des solutions complètes pour la chaîne d'approvisionnement en produits pétroliers en République Démocratique du Congo.</p>
+                <div class="d-flex flex-wrap">
+                    <a href="#services" class="btn btn-primary btn-lg px-4 me-3 mb-3">Nos Services</a>
+                    <a href="{% url 'contact' %}" class="btn btn-outline-primary btn-lg px-4 mb-3">Contactez-nous</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/petrole.jpg' %}" alt="Transport pétrolier" class="img-fluid rounded-3 shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-5 bg-light">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Nos Services Pétroliers</h2>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">Des solutions adaptées à chaque maillon de la chaîne pétrolière</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Service 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="icon text-primary mb-4">
+                            <i class="fas fa-truck fa-3x"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Transport Sécurisé</h4>
+                        <p class="card-text">Flotte moderne de camions-citernes avec système de suivi GPS et personnel formé aux matières dangereuses.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="icon text-primary mb-4">
+                            <i class="fas fa-gas-pump fa-3x"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Distribution Nationale</h4>
+                        <p class="card-text">Réseau de distribution couvrant les principales villes et régions de la RDC avec des partenaires locaux.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="icon text-primary mb-4">
+                            <i class="fas fa-warehouse fa-3x"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Stockage Sécurisé</h4>
+                        <p class="card-text">Installations de stockage certifiées et équipées des dernières technologies de sécurité.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Autres sections spécifiques à la branche pétrolière -->
+{% endblock %}

@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .careers-hero {
+        background: linear-gradient(rgba(209, 0, 0, 0.8), rgba(154, 0, 0, 0.8)), url('{% static "images/logistics-team.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+    }
+    
+    .benefit-card {
+        border: none;
+        border-radius: 8px;
+        padding: 30px;
+        height: 100%;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s;
+        border-top: 3px solid transparent;
+    }
+    
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(209,0,0,0.1);
+        border-top: 3px solid #D10000;
+    }
+    
+    .linkedin-box {
+        border: 2px solid #148bca;
+        border-radius: 8px;
+        padding: 30px;
+        background-color: rgba(0, 119, 181, 0.05);
+    }
+    
+    .job-category {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+    }
+    
+    .job-category:hover {
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+</style>
+
+<!-- Main Content -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Opportunités chez Euro Congo Trans</h2>
+                <p>Nous recrutons des professionnels passionnés pour renforcer notre équipe de transport et distribution pétrolière</p>
+            </div>
+        </div>
+        
+        <!-- Job Categories -->
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <div class="job-category">
+                    <h4><i class="fas fa-truck text-danger me-2"></i> Conducteurs Pétroliers</h4>
+                    <p>Profils expérimentés pour le transport sécurisé de produits pétroliers à travers la RDC</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-danger me-2"></i> Permis ADR requis</li>
+                        <li><i class="fas fa-check-circle text-danger me-2"></i> Expérience en transport de matières dangereuses</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="job-category">
+                    <h4><i class="fas fa-gas-pump text-danger me-2"></i> Techniciens Logistique</h4>
+                    <p>Spécialistes en gestion des stocks et distribution pétrolière</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-danger me-2"></i> Connaissance des normes pétrolières</li>
+                        <li><i class="fas fa-check-circle text-danger me-2"></i> Expérience en gestion d'entrepôts</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="job-category">
+                    <h4><i class="fas fa-tools text-danger me-2"></i> Mécaniciens Spécialisés</h4>
+                    <p>Techniciens pour la maintenance de notre flotte pétrolière</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-danger me-2"></i> Certification véhicules lourds</li>
+                        <li><i class="fas fa-check-circle text-danger me-2"></i> Connaissance des systèmes ADR</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="job-category">
+                    <h4><i class="fas fa-user-tie text-danger me-2"></i> Responsables Sécurité</h4>
+                    <p>Experts en prévention des risques pétroliers</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-danger me-2"></i> Formation QHSE requise</li>
+                        <li><i class="fas fa-check-circle text-danger me-2"></i> Expérience en industrie pétrolière</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- LinkedIn Box -->
+        <div class="row mb-5" id="linkedin">
+            <div class="col-lg-8 mx-auto">
+                <div class="linkedin-box text-center">
+                    <i class="fab fa-linkedin fa-3x mb-4" style="color: #0077B5;"></i>
+                    <h3 class="mb-3">Postulez via LinkedIn</h3>
+                    <p class="lead mb-4">Nous gérons toutes nos offres d'emploi via notre page LinkedIn pour un processus de recrutement transparent et efficace.</p>
+                    <a href="https://www.linkedin.com/company/euro-congo-trans/jobs/" target="_blank" class="btn btn-primary btn-lg" style="background-color: #0077B5; border-color: #0077B5;">
+                        <i class="fab fa-linkedin-in me-2"></i> Voir nos offres
+                    </a>
+                    <p class="small mt-3">Vous n'avez pas de compte LinkedIn ? <a href="https://www.linkedin.com/signup" target="_blank">Créez-en un gratuitement</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Benefits -->
+        <div class="row" id="benefits">
+            <div class="col-12 text-center mb-5">
+                <h2>Pourquoi Travailler Chez Euro Congo Trans ?</h2>
+                <p class="lead">Nos avantages pour les employés</p>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="benefit-card">
+                    <i class="fas fa-certificate text-danger fa-2x mb-3"></i>
+                    <h4>Formations ADR</h4>
+                    <p>Certifications régulières pour le transport de matières dangereuses</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="benefit-card">
+                    <i class="fas fa-route text-danger fa-2x mb-3"></i>
+                    <h4>Plans de Rotation</h4>
+                    <p>Organisation du travail adaptée aux longs trajets</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt text-danger fa-2x mb-3"></i>
+                    <h4>Équipements Sécurité</h4>
+                    <p>Matériel de protection individuelle haut de gamme</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line text-danger fa-2x mb-3"></i>
+                    <h4>Évolution Professionnelle</h4>
+                    <p>Promotions internes et développement des compétences</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="benefit-card">
+                    <i class="fas fa-hand-holding-heart text-danger fa-2x mb-3"></i>
+                    <h4>Protection Sociale</h4>
+                    <p>Couverture médicale complète et avantages sociaux</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 bg-danger text-white">
+    <div class="container text-center">
+        <h2 class="display-4 mb-4">Prêt à rejoindre notre flotte ?</h2>
+        <a href="https://www.linkedin.com/company/euro-congo-trans/jobs/" target="_blank" class="btn btn-light btn-lg me-3">
+            <i class="fab fa-linkedin-in me-2"></i> Postuler maintenant
+        </a>
+        <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">Nous contacter</a>
+    </div>
+</section>
+
+{% endblock %}

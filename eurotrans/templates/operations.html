@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .operations-hero {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('{% static "images/operations-banner.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 0;
+        text-align: center;
+    }
+    
+    .site-card {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s;
+        height: 100%;
+        border: none;
+    }
+    
+    .site-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(209,0,0,0.2);
+    }
+    
+    .site-card .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .site-card .card-body {
+        padding: 25px;
+    }
+    
+    .site-badge {
+        background-color: #D10000;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    
+    .mineral-tag {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+    
+    .map-container {
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        border: 1px solid #eee;
+    }
+    
+    .stats-box {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        height: 100%;
+    }
+    
+    .stats-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #D10000;
+    }
+</style>
+
+<!-- Main Content -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-4 mb-4">Nos Sites Miniers</h2>
+                <p>Euro Congo Entreprise exploite des gisements de classe mondiale dans cinq zones clés de la République Démocratique du Congo</p>
+            </div>
+        </div>
+        
+        <!-- Sites Grid -->
+        <div class="row g-4 mb-5">
+            <!-- KAWAMA -->
+            <div class="col-lg-4 col-md-6">
+                <div class="site-card card">
+                    <img src="{% static 'images/kawama-site.jpg' %}" class="card-img-top" alt="Site de Kawama">
+                    <div class="card-body">
+                        <span class="site-badge">Site phare</span>
+                        <h3 class="card-title">KAWAMA</h3>
+                        <h6 class="text-muted mb-3">Province du Lualaba</h6>
+                        <p class="card-text">Notre plus important site de production de cuivre avec des réserves estimées à 15 millions de tonnes.</p>
+                        
+                        <div class="mb-3">
+                            <strong>Minerais principaux :</strong><br>
+                            <span class="mineral-tag">Cuivre (Cu)</span>
+                            <span class="mineral-tag">Cobalt (Co)</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-danger">Détails du site</a>
+                            <small class="text-muted">Opérationnel depuis 2015</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KISANFU -->
+            <div class="col-lg-4 col-md-6">
+                <div class="site-card card">
+                    <img src="{% static 'images/kisanfu-site.jpg' %}" class="card-img-top" alt="Site de Kisanfu">
+                    <div class="card-body">
+                        <span class="site-badge">Nouveau projet</span>
+                        <h3 class="card-title">KISANFU</h3>
+                        <h6 class="text-muted mb-3">Province du Haut-Katanga</h6>
+                        <p class="card-text">Site stratégique contenant l'une des plus importantes réserves de cobalt au monde.</p>
+                        
+                        <div class="mb-3">
+                            <strong>Minerais principaux :</strong><br>
+                            <span class="mineral-tag">Cobalt (Co)</span>
+                            <span class="mineral-tag">Cuivre (Cu)</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-danger">Détails du site</a>
+                            <small class="text-muted">Opérationnel depuis 2019</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KAKANDA -->
+            <div class="col-lg-4 col-md-6">
+                <div class="site-card card">
+                    <img src="{% static 'images/kakanda-site.jpg' %}" class="card-img-top" alt="Site de Kakanda">
+                    <div class="card-body">
+                        <span class="site-badge">Site certifié</span>
+                        <h3 class="card-title">KAKANDA</h3>
+                        <h6 class="text-muted mb-3">Province du Lualaba</h6>
+                        <p class="card-text">Site modèrne avec des technologies de traitement des minerais de dernière génération.</p>
+                        
+                        <div class="mb-3">
+                            <strong>Minerais principaux :</strong><br>
+                            <span class="mineral-tag">Cuivre (Cu)</span>
+                            <span class="mineral-tag">Nickel (Ni)</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-danger">Détails du site</a>
+                            <small class="text-muted">Opérationnel depuis 2017</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KISENDA -->
+            <div class="col-lg-6 col-md-6">
+                <div class="site-card card">
+                    <img src="{% static 'images/kisenda-site.jpg' %}" class="card-img-top" alt="Site de Kisenda">
+                    <div class="card-body">
+                        <span class="site-badge">Site d'exploration</span>
+                        <h3 class="card-title">KISENDA</h3>
+                        <h6 class="text-muted mb-3">Province du Haut-Katanga</h6>
+                        <p class="card-text">Zone prometteuse avec d'importants gisements de cuivre à haute teneur en cours d'évaluation.</p>
+                        
+                        <div class="mb-3">
+                            <strong>Minerais principaux :</strong><br>
+                            <span class="mineral-tag">Cuivre (Cu)</span>
+                            <span class="mineral-tag">Or (Au)</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-danger">Détails du site</a>
+                            <small class="text-muted">En exploration depuis 2020</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AUTRES SITES -->
+            <div class="col-lg-6 col-md-6">
+                <div class="site-card card">
+                    <img src="{% static 'images/autres-sites.jpg' %}" class="card-img-top" alt="Autres sites">
+                    <div class="card-body">
+                        <span class="site-badge">Divers</span>
+                        <h3 class="card-title">AUTRES SITES</h3>
+                        <h6 class="text-muted mb-3">Multiple provinces</h6>
+                        <p class="card-text">Plusieurs sites d'exploration et petites exploitations répartis dans le Copperbelt congolais.</p>
+                        
+                        <div class="mb-3">
+                            <strong>Minerais principaux :</strong><br>
+                            <span class="mineral-tag">Coltan (Ta)</span>
+                            <span class="mineral-tag">Diamant</span>
+                            <span class="mineral-tag">Manganèse (Mn)</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-danger">Voir la liste complète</a>
+                            <small class="text-muted">En activité</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carte et Statistiques -->
+        <div class="row mb-5 g-4">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h3 class="mb-4">Localisation de Nos Sites</h3>
+                        <div class="map-container">
+                            <img src="{% static 'images/katanga.jpg' %}" alt="Carte des opérations en RDC" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="stats-box">
+                    <h3 class="mb-4">Chiffres Clés</h3>
+                    
+                    <div class="text-center mb-4">
+                        <div class="stats-number">5</div>
+                        <p class="mb-0">Zones opérationnelles principales</p>
+                    </div>
+                    
+                    <div class="text-center mb-4">
+                        <div class="stats-number">1,850+</div>
+                        <p class="mb-0">Employés directs</p>
+                    </div>
+                    
+                    <div class="text-center mb-4">
+                        <div class="stats-number">120kT</div>
+                        <p class="mb-0">Production annuelle de cuivre</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="stats-number">25kT</div>
+                        <p class="mb-0">Production annuelle de cobalt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Approche Environnementale -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-0 bg-danger text-white">
+                    <div class="card-body p-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <h3>Notre Engagement Environnemental</h3>
+                                <p class="lead">Dans chacune de nos zones opérationnelles, nous mettons en œuvre des pratiques minières responsables</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Systèmes de gestion des eaux en circuit fermé</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Programmes de reboisement systématique</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> Surveillance continue de la qualité de l'air</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <img src="{% static 'images/eco-mining.png' %}" alt="Mining responsable" style="max-height: 200px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="display-4 mb-4">En savoir plus sur nos opérations</h2>
+        <a href="{% url 'contact' %}" class="btn btn-danger btn-lg me-3">Contactez notre équipe</a>
+        <a href="{% url 'responsibility' %}" class="btn btn-outline-danger btn-lg">Notre responsabilité sociale</a>
+    </div>
+</section>
+
+{% endblock %}

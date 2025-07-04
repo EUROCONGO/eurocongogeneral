@@ -1,0 +1,172 @@
+ {% load static %}
+<!-- Section d'introduction -->
+ <section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <span class="badge bg-primary rounded-pill px-3 py-2 mb-3">Notre Groupe</span>
+                <h1 class="display-4 fw-bold mb-4">Branches d'Euro Congo General</h1>
+                <p class="lead mb-4">Un groupe diversifié couvrant les principaux secteurs du développement économique et social.</p>
+                <p>Fondé en 2016, Euro Congo Général s'est imposé comme un acteur clé du développement en RDC à travers ses multiples branches d'activité complémentaires.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/logo.png' %}" alt="Domaines d'activité d'Euro Congo Général" class="img-fluid rounded-3 shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section des branches d'activité -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center display-5 fw-bold mb-5">Nos Branches d'Activité</h2>
+        
+        <!-- Import & Export -->
+        <div class="row align-items-center mb-5 branch-section">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h3 class="fw-bold mb-3">Import & Export</h3>
+                <p>Solutions complètes pour le commerce international, facilitation des échanges et logistique douanière. Nous offrons des services intégrés pour fluidifier vos opérations commerciales transfrontalières.</p>
+                <a href="{% url 'import_export' %}" class="btn btn-primary mt-3">Découvrir</a>
+            </div>
+            <div class="col-lg-8">
+                <img src="{% static 'images/import.jpg' %}" alt="Import Export" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+        
+        <!-- Produits Pétroliers -->
+        <div class="row align-items-center mb-5 branch-section">
+            <div class="col-lg-8 order-lg-1 order-2">
+                <img src="{% static 'images/oil.jpg' %}" alt="Produits Pétroliers" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0 order-lg-2 order-1">
+                <h3 class="fw-bold mb-3">Produits Pétroliers</h3>
+                <p>Distribution, transport et stockage de produits pétroliers avec des infrastructures modernes et sécurisées. Notre réseau couvre l'ensemble du territoire national.</p>
+                <a href="{% url 'petroleum' %}" class="btn btn-primary mt-3">Découvrir</a>
+            </div>
+        </div>
+        
+        <!-- Construction de Logements -->
+        <div class="row align-items-center mb-5 branch-section">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h3 class="fw-bold mb-3">Construction de Logements</h3>
+                <p>Conception et réalisation de complexes résidentiels modernes et accessibles à travers le pays. Nos projets intègrent des solutions durables et adaptées aux besoins locaux.</p>
+                <a href="{% url 'housing' %}" class="btn btn-primary mt-3">Découvrir</a>
+            </div>
+            <div class="col-lg-8">
+                <img src="{% static 'images/construction.JPEG' %}" alt="Construction" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+        
+        <!-- Éducation -->
+        <div class="row align-items-center mb-5 branch-section">
+            <div class="col-lg-8 order-lg-1 order-2">
+                <img src="{% static 'images/univ.jpg' %}" alt="Éducation" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0 order-lg-2 order-1">
+                <h3 class="fw-bold mb-3">Universités & Éducation</h3>
+                <p>Construction d'institutions éducatives de haut niveau et partenariats avec des universités internationales. Nous contribuons à former la future élite congolaise.</p>
+                <a href="{% url 'education' %}" class="btn btn-primary mt-3">Découvrir</a>
+            </div>
+        </div>
+        
+        <!-- Santé -->
+        <div class="row align-items-center mb-5 branch-section">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h3 class="fw-bold mb-3">Hôpitaux & Santé</h3>
+                <p>Infrastructure médicale moderne et équipements de pointe pour améliorer le système de santé congolais. Nos établissements répondent aux standards internationaux.</p>
+                <a href="{% url 'healthcare' %}" class="btn btn-primary mt-3">Découvrir</a>
+            </div>
+            <div class="col-lg-8">
+                <img src="{% static 'images/hopital.jpg' %}" alt="Santé" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+        
+        <!-- Infrastructures -->
+        <div class="row align-items-center mb-5 branch-section">
+            <div class="col-lg-8 order-lg-1 order-2">
+                <img src="{% static 'images/route.avif' %}" alt="Infrastructures" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0 order-lg-2 order-1">
+                <h3 class="fw-bold mb-3">Infrastructures Routières</h3>
+                <p>Développement de réseaux routiers, ponts et infrastructures de transport pour connecter le pays. Nos projets favorisent le désenclavement des régions.</p>
+                <a href="{% url 'infrastructure' %}" class="btn btn-primary mt-3">Découvrir</a>
+            </div>
+        </div>
+        
+        <!-- Services Financiers -->
+        <div class="row align-items-center mb-5 branch-section">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h3 class="fw-bold mb-3">Services Financiers</h3>
+                <p>Solutions bancaires et financières innovantes pour soutenir le développement économique. Nous facilitons l'accès au crédit et aux services financiers.</p>
+                <a href="{% url 'banking' %}" class="btn btn-primary mt-3">Découvrir</a>
+            </div>
+            <div class="col-lg-8">
+                <img src="{% static 'images/finance.webp' %}" alt="Services Financiers" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+        
+        <!-- Entrepreneuriat -->
+        <div class="row align-items-center mb-5 branch-section">
+            <div class="col-lg-8 order-lg-1 order-2">
+                <img src="{% static 'images/en1.png' %}" alt="Entrepreneuriat" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0 order-lg-2 order-1">
+                <h3 class="fw-bold mb-3">Entrepreneuriat</h3>
+                <p>Incubation, accompagnement et financement des startups et PME pour stimuler l'innovation. Nous soutenons la création d'emplois et le développement économique local.</p>
+                <a href="{% url 'entrepreneurship' %}" class="btn btn-primary mt-3">Découvrir</a>
+            </div>
+        </div>
+        
+        <!-- Développement Intégré -->
+        <div class="row align-items-center mb-5 branch-section">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h3 class="fw-bold mb-3">Développement Intégré</h3>
+                <p>Solutions transversales combinant nos expertises pour un impact global sur le développement du pays. Nos projets intégrés créent des synergies entre nos différentes branches.</p>
+                <a href="{% url 'development' %}" class="btn btn-primary mt-3">Découvrir</a>
+            </div>
+            <div class="col-lg-8">
+                <img src="{% static 'images/dev.jpg' %}" alt="Développement Intégré" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .branch-section {
+        padding: 3rem 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .branch-section:last-child {
+        border-bottom: none;
+    }
+    
+    .branch-section h3 {
+        color: var(--primary);
+        font-size: 1.8rem;
+    }
+    
+    .branch-section p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    @media (max-width: 768px) {
+        .branch-section {
+            padding: 2rem 0;
+        }
+        
+        .branch-section h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .branch-section .order-lg-1 {
+            order: 1 !important;
+        }
+        
+        .branch-section .order-lg-2 {
+            order: 2 !important;
+        }
+    }
+</style>

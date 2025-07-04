@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section (déjà dans navbar.html) -->
+{% load static %}
+<style>
+    :root {
+        --primary: #C8102E; /* Rouge principal */
+        --primary-dark: #8C0B20; /* Rouge foncé */
+        --primary-light: #F8A5B3; /* Rouge clair/rose */
+        --secondary: #FFD700; /* Or pour accents */
+        --dark: #212529; /* Noir pour texte */
+        --light: #F8F9FA; /* Gris très clair */
+        --gray: #E9ECEF; /* Gris clair */
+        --white: #ffffff; /* Blanc pur */
+    }
+    
+    .btn-primary {
+        background-color: var(--primary);
+        border-color: var(--primary);
+    }
+    
+    .btn-primary:hover {
+        background-color: var(--primary-dark);
+        border-color: var(--primary-dark);
+    }
+    
+    .btn-outline-primary {
+        color: var(--primary);
+        border-color: var(--primary);
+    }
+    
+    .btn-outline-primary:hover {
+        background-color: var(--primary);
+        color: white;
+    }
+    
+    .bg-primary {
+        background-color: var(--primary) !important;
+    }
+    
+    .text-primary {
+        color: var(--primary) !important;
+    }
+    
+    .text-justify {
+        text-align: justify;
+    }
+    
+    .section-title {
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 80px;
+        height: 3px;
+        background: var(--secondary);
+    }
+    
+    .icon-box {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .director-photo {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .branch-badge {
+        background-color: var(--primary);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+    
+    /* Animation pour les sections */
+    section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+    }
+</style>
+
+<!-- About Section -->
+<section class="py-5 bg-light" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <span class="branch-badge">Groupe Diversifié</span>
+                <h2 class="display-4 mb-4">Euro Congo General</h2>
+                <p class="lead">Depuis 2016, nous nous engageons pour le développement économique et social de la RDC à travers nos 9 branches d'activité.</p>
+                <p>Notre approche intégrée nous permet d'offrir des solutions complètes dans des secteurs clés pour le développement du pays, tout en garantissant qualité, sécurité et innovation.</p>
+                <a href="{% url 'about' %}" class="btn btn-primary btn-lg mt-3">Découvrir notre groupe</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/logo2.png' %}" alt="Euro Congo Général" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mot du Directeur Général -->
+<section class="py-5" id="director-word" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-4 section-title">Mot du Président Directeur Général</h2>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="director-message p-4 text-justify">
+                    <blockquote class="blockquote">
+                        <p class="lead font-italic">
+                            "L'excellence opérationnelle et l'impact social sont au cœur de notre engagement quotidien."
+                        </p>
+                    </blockquote>
+                    <p>
+                        Depuis sa création, Euro Congo General s'est engagé à contribuer au développement de la République Démocratique du Congo à travers des projets structurants dans des secteurs clés.
+                    </p>
+                    <p>
+                        Notre succès repose sur une vision holistique du développement, combinant expertise sectorielle et approche intégrée. Chacune de nos 9 branches d'activité participe à l'édification d'une RDC plus prospère et connectée.
+                    </p>
+                    <p>
+                        Que ce soit à travers nos infrastructures éducatives et médicales, nos projets résidentiels, nos solutions logistiques ou nos services bancaires, nous mettons un point d'honneur à respecter les plus hauts standards tout en ayant un impact social positif.
+                    </p>
+                    <p>
+                        Notre objectif est de continuer à être un partenaire de choix pour le développement économique et social de notre pays, en créant de la valeur pour toutes les parties prenantes.
+                    </p>
+                    <a href="{% url 'about' %}#governance" class="btn btn-primary btn-lg mt-3">
+                        <i class="fas fa-user-tie me-2"></i>Notre gouvernance
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="director-photo-container text-center">
+                    <img src="{% static 'images/directeur.png' %}" alt="Président Directeur Général" 
+                         class="director-photo shadow-lg mb-3">
+                    <h4 class="mt-2">Jean Claude KYUNGU KABILA</h4>
+                    <p class="text-muted">Président Directeur Général</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'branches.html' %}
+{% include 'photos.html' %}
+
+
+<!-- Contact CTA -->
+<section class="py-5" style="background-color: var(--primary); color: white;">
+    <div class="container text-center">
+        <h2 class="display-4 mb-4">Un projet de développement pour la RDC ?</h2>
+        <p class="lead mb-5">Notre groupe multidisciplinaire a les solutions pour concrétiser votre vision.</p>
+        <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-5">Contactez notre équipe</a>
+    </div>
+</section>
+
+<script>
+    // Animation pour les sections
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease';
+            observer.observe(section);
+        });
+    });
+</script>
+{% endblock %}
